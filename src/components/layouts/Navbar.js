@@ -177,7 +177,7 @@ export default function Navbar() {
             display={['flex', 'flex', 'none', 'none', 'none']}
             rightIcon=<BsTelephoneOutbound />
           >
-            Réserver
+            Reserve
           </OutlineButton>
         </Link>
       </Stack>
