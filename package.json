@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "version": "0.0.2",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -p $PORT"
+  },
+  "dependencies": {
+    "@chakra-ui/icons": "^1.0.0",
+    "@chakra-ui/react": "^1.4.2",
+    "@emotion/react": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
+    "@fontsource/open-sans": "^4.5.2",
+    "framer-motion": "^4.0.3",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-icons": "^4.3.1",
+    "react-parallax": "^3.3.0",
+    "react-responsive-carousel": "^3.2.22",
+    "react-reveal": "^1.2.2",
+    "react-slick": "^0.28.1"
+  },
+  "license": "MIT"
+}
