@@ -169,7 +169,7 @@ export default function Navbar() {
         </Link>
       ))}
         <Link 
-          href='tel: +213 23 100 101'
+          href='tel: +66 804 033 004'
           passHref
           display={['flex', 'flex', 'none', 'none', 'none']}
         >
