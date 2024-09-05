@@ -27,7 +27,7 @@ export default function Header() {
           noOfLines={[10, 5, 3]} 
           align='center'
         >
-          Cette page n'existe pas ou est indisponible.
+          site not exist
         </Text>
       </Stack>
     </Center>
