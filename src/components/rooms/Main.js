@@ -221,7 +221,7 @@ export default function Main() {
                   }}
                   _focus={{  }}
                 >
-                  Découvrir chambre {room.title}
+                  Reserve
                 </Button>
               </Flex>
             </Fade>
