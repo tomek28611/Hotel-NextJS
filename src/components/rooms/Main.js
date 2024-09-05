@@ -39,7 +39,7 @@ export default function Main() {
       title: 'Car and motorbike rental',
       src: './lucky-car.jpg',
       description: 'From the hotel you can go to the beach or go on a trip by car or motorbike',
-      link: ''
+      link: '/rent'
     },
   ]
 

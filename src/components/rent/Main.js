@@ -79,7 +79,7 @@ import {
             <Parallax
               bgImage='./lucky-car.jpg'
               bgImageAlt='Car'
-              strength={880}
+              strength={180}
             >
               <Center 
                 px={[12, 120, 160, 200, 220, 240]}
