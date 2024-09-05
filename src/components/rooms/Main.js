@@ -14,32 +14,32 @@ import Fade from 'react-reveal/Fade';
 import { Parallax } from 'react-parallax'
 
 // Custom Header component
-import Header from '../../components/Header'
+import Header from '../Header'
 
 
 export default function Main() {
   // Rooms data
   const rooms = [
     {
-    //   id: 1,
-    //   title: 'Simple',
-    //   src: './room-1.jpeg',
-    //   description: 'Basic une chambre et une salle de bain',
-    //   link: ''
-    // },
-    // {
-    //   id: 2,
-    //   title: 'Double',
-    //   src: './room-4.jpeg',
-    //   description: 'Deux chambres et une salle de bain de base',
-    //   link: ''
-    // },
-    // {
-    //   id: 3,
-    //   title: 'Premium',
-    //   src: './room-8.jpeg',
-    //   description: 'VIP deux chambres à coucher et deux salles de bain',
-    //   link: ''
+      id: 1,
+      title: 'Convenience',
+      src: './lucky-hotel-2.jpg',
+      description: 'Each room has a comfortable bed, air conditioning, refrigerator, TV. Everything you need to relax',
+      link: ''
+    },
+    {
+      id: 2,
+      title: 'Bathroom',
+      src: './lucky-hotel-3.jpg',
+      description: 'The bathroom is spacious and comfortable, you will find all the cosmetics for bathing and hygiene',
+      link: ''
+    },
+    {
+      id: 3,
+      title: 'Car and motorbike rental',
+      src: './lucky-car.jpg',
+      description: 'From the hotel you can go to the beach or go on a trip by car or motorbike',
+      link: ''
     },
   ]
 
@@ -138,7 +138,7 @@ export default function Main() {
                       }}
                       _focus={{  }}
                     >
-                      {/* Découvrir chambre {room.title} */}
+                      Reserve 
                     </Button>
                   </Flex>
                 </Fade>
@@ -178,7 +178,7 @@ export default function Main() {
                       }}
                       _focus={{  }}
                     >
-                      {/* Découvrir chambre {room.title} */}
+                      Reserve
                     </Button>
                   </Flex>
                 </Fade>
@@ -221,7 +221,7 @@ export default function Main() {
                   }}
                   _focus={{  }}
                 >
-                  {/* Découvrir chambre {room.title} */}
+                  Découvrir chambre {room.title}
                 </Button>
               </Flex>
             </Fade>

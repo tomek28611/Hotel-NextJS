@@ -8,7 +8,7 @@ export default function Layout({ children }) {
     <>
       <Head>
         <link rel='icon' href='logo.png'/>
-        <title>Hotel 21</title>
+        <title>Lucky Andaman</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Flex
