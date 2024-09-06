@@ -112,7 +112,7 @@ import {
             mb={[8, 12, 16]}
             mx={6}
           >
-            Stay in a room in Lucky Andaman Hotel
+            Stay in a room in Lucky Andaman Hotel 
           </Text>
         </Flex>
         <Flex direction='column' bg='secondary'>

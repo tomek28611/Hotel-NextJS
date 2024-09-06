@@ -53,7 +53,7 @@ export default function Navbar() {
           >
             <Tooltip
               hasArrow 
-              label='Hotel 21'
+              label='Lucky-Andaman'
               bg='secondary'
               color='primary'
               placement='auto'
