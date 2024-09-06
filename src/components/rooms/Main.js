@@ -131,8 +131,8 @@ export default function Main() {
                 <Text align='center' my={2}>
                   {room.description}
                 </Text>
-                {/* Dodaj warunek, aby nie wyświetlać przycisku dla konkretnego pokoju */}
-                {room.id !== 2 && ( // Przykład: Pokój o id 3 nie będzie miał przycisku
+              
+                {room.id !== 2 && ( 
                   <Button
                     as='a'
                     my={2}
@@ -175,8 +175,8 @@ export default function Main() {
                 <Text align='center' my={2}>
                   {room.description}
                 </Text>
-                {/* Dodaj warunek, aby nie wyświetlać przycisku dla konkretnego pokoju */}
-                {room.id !== 2 && ( // Przykład: Pokój o id 3 nie będzie miał przycisku
+               
+                {room.id !== 2 && ( 
                   <Button
                     as='a'
                     my={2}
@@ -222,8 +222,8 @@ export default function Main() {
             <Text align='center' my={2}>
               {room.description}
             </Text>
-            {/* Dodaj warunek, aby nie wyświetlać przycisku dla konkretnego pokoju */}
-            {room.id !== 2 && ( // Przykład: Pokój o id 3 nie będzie miał przycisku
+           
+            {room.id !== 2 && ( 
               <Button
                 as='a'
                 my={2}

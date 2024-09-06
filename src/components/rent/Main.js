@@ -1,11 +1,23 @@
+import React, { useState } from 'react';
+import Link from 'next/link';
+import OutlineButton from '../../components/OutlineButton';
+import { BsTelephoneOutbound } from 'react-icons/bs'
 import {
-    Flex,
-    Center,
-    Text,
-    Button,
-    Image,
-    Spacer
-  } from '@chakra-ui/react'
+  Flex,
+  Center,
+  Text,
+  Button,
+  Image,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+  ModalFooter,
+  useDisclosure,
+  Portal
+} from '@chakra-ui/react'
   
   // Reveal animation on room pictures
   import Fade from 'react-reveal/Fade';
@@ -18,6 +30,7 @@ import {
   
   
   export default function Main() {
+    const { isOpen, onOpen, onClose } = useDisclosure();
     // Rooms data
     const rooms = [
       {
@@ -151,6 +164,7 @@ import {
                           transform: 'scale(0.98)',
                         }}
                         _focus={{  }}
+                        onClick={onOpen}
                       >
                         Reserve 
                       </Button>
@@ -191,6 +205,7 @@ import {
                           transform: 'scale(0.98)',
                         }}
                         _focus={{  }}
+                        onClick={onOpen}
                       >
                         Reserve
                       </Button>
@@ -234,6 +249,7 @@ import {
                       transform: 'scale(0.98)',
                     }}
                     _focus={{  }}
+                    onClick={onOpen}
                   >
                     Reserve
                   </Button>
@@ -246,6 +262,76 @@ import {
             </>
           ))}
         </Flex>
+        <Portal>
+        <Modal isOpen={isOpen} onClose={onClose} >
+          <ModalOverlay bg="rgba(0, 0, 0, 0.4)" zIndex={1400} />
+          <ModalContent bg="white" zIndex={1500}>
+            <ModalHeader>Contact and Reserve</ModalHeader>
+            <ModalCloseButton />
+            <ModalBody>
+              <Button
+                as="a"
+                href="http://wa.me/66804033004"
+                target="_blank"
+                rel="noopener noreferrer"
+                bg="transparent"
+                _hover={{ bg: 'none' }}
+                width="70px" // Szerokość przycisku
+                height="120px" // Wysokość przycisku
+                borderRadius="md" // Opcjonalne zaokrąglenie rogów
+                p={2}
+              >
+                <Image src="/whatsapp.png" alt="WhatsApp" boxSize="50px" mx="auto" /> {/* Rozmiar obrazu */}
+              </Button>
+
+
+              <Button
+                as="a"
+                href="https://line.me/ti/p/tWJCrm0wfz"
+                target="_blank"
+                rel="noopener noreferrer"
+                bg="transparent"
+                _hover={{ bg: 'none' }}
+                width="70px" // Szerokość przycisku
+                height="120px" // Wysokość przycisku
+                borderRadius="md" // Opcjonalne zaokrąglenie rogów
+                p={2}
+              >
+                <Image src="/line.png" alt="Line" boxSize="50px" mx="auto" /> {/* Rozmiar obrazu */}
+              </Button>
+              <Button
+                as="a"
+                href="https://t.me/bar13patong"
+                target="_blank"
+                rel="noopener noreferrer"
+                bg="transparent"
+                _hover={{ bg: 'none' }}
+                width="70px" // Szerokość przycisku
+                height="120px" // Wysokość przycisku
+                borderRadius="md" // Opcjonalne zaokrąglenie rogów
+                p={2}
+              >
+                <Image src="/telegram.png" alt="telegram" boxSize="50px" mx="auto" /> {/* Rozmiar obrazu */}
+              </Button>
+
+
+              <Link
+                href='tel: +66 804 033 004'
+                passHref
+                display={['flex', 'flex', 'none', 'none', 'none']}
+              >
+                <OutlineButton
+                  display={['flex', 'flex', 'none', 'none', 'none']}
+                  rightIcon=<BsTelephoneOutbound />
+                >
+                  Phone
+                </OutlineButton>
+              </Link>
+
+            </ModalBody>
+          </ModalContent>
+        </Modal>
+      </Portal>
       </>
     )
   }
