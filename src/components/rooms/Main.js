@@ -250,8 +250,8 @@ export default function Main() {
       </Flex>
       <Portal>
         <Modal isOpen={isOpen} onClose={onClose} >
-          <ModalOverlay zIndex={1400} />
-          <ModalContent zIndex={1500}>
+          <ModalOverlay bg="rgba(0, 0, 0, 0.4)" zIndex={1400} />
+          <ModalContent bg="white" zIndex={1500}>
             <ModalHeader>Okno z przyciskami</ModalHeader>
             <ModalCloseButton />
             <ModalBody>
