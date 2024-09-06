@@ -122,7 +122,7 @@ export default function Navbar() {
         <Spacer 
           display={['none', 'none', 'flex', 'flex', 'flex']}
         />
-        <Link 
+        {/* <Link 
           href='/'
           passHref
           display={['none', 'none', 'flex', 'flex', 'flex']}
@@ -133,7 +133,7 @@ export default function Navbar() {
           >
             Reserve
           </OutlineButton>
-        </Link>
+        </Link> */}
       </Flex>
     </HStack>
     {isOpen ? (
@@ -168,7 +168,7 @@ export default function Navbar() {
           </Button>
         </Link>
       ))}
-        <Link 
+        {/* <Link 
           href='tel: +66 804 033 004'
           passHref
           display={['flex', 'flex', 'none', 'none', 'none']}
@@ -179,7 +179,7 @@ export default function Navbar() {
           >
             Reserve
           </OutlineButton>
-        </Link>
+        </Link> */}
       </Stack>
       ) : null}
     </>
