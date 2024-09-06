@@ -115,107 +115,24 @@ export default function Main() {
         </Text>
       </Flex>
       <Flex direction='column' bg='secondary'>
-        {rooms.map((room) => (
-          <>
-            <Flex
-              direction='row'
-              display={['none', 'none', 'flex', 'flex', 'flex', 'flex']}
-            >
-              <Center w='100%'>
-                {room.id % 2 == 0 ?
-                  <Fade right>
-                    <Flex direction='column'>
-                      <Text color='primary' fontSize='xl' align='center' my={1}>
-                        {room.title}
-                      </Text>
-                      <Text align='center' my={2}>
-                        {room.description}
-                      </Text>
-                      <Button
-                        as='a'
-                        my={2}
-                        mx={12}
-                        bg='none'
-                        border='2px'
-                        borderRadius={0}
-                        fontWeight='bold'
-                        transition='all 0.2s cubic-bezier(.08,.52,.52,1)'
-                        _hover={{
-                          bg: 'primary',
-                          textColor: 'black',
-                          fontWeight: 'extrabold'
-                        }}
-                        _active={{
-                          bg: 'primary',
-                          transform: 'scale(0.98)',
-                        }}
-                        _focus={{}}
-                        onClick={onOpen}
-                      >
-                        Reserve
-                      </Button>
-                    </Flex>
-                  </Fade>
-                  :
-                  <Fade left>
-                    <Image src={room.src} />
-                  </Fade>
-                }
-              </Center>
-              <Center w='100%'>
-                {room.id % 2 != 0 ?
-                  <Fade left>
-                    <Flex direction='column'>
-                      <Text color='primary' fontSize='xl' align='center' my={2}>
-                        {room.title}
-                      </Text>
-                      <Text align='center' my={2}>
-                        {room.description}
-                      </Text>
-                      <Button
-                        as='a'
-                        my={2}
-                        mx={12}
-                        bg='none'
-                        border='2px'
-                        borderRadius={0}
-                        fontWeight='bold'
-                        transition='all 0.2s cubic-bezier(.08,.52,.52,1)'
-                        _hover={{
-                          bg: 'primary',
-                          textColor: 'black',
-                          fontWeight: 'extrabold'
-                        }}
-                        _active={{
-                          bg: 'primary',
-                          transform: 'scale(0.98)',
-                        }}
-                        _focus={{}}
-                        onClick={onOpen}
-                      >
-                        Reserve
-                      </Button>
-                    </Flex>
-                  </Fade>
-                  :
-                  <Fade left>
-                    <Image src={room.src} />
-                  </Fade>
-                }
-              </Center>
-            </Flex>
-            <Flex
-              direction='column-reverse'
-              display={['flex', 'flex', 'none', 'none', 'none', 'none']}
-            >
-              <Fade left>
-                <Flex direction='column' my={10}>
-                  <Text color='primary' fontSize='xl' align='center' my={1}>
-                    {room.title}
-                  </Text>
-                  <Text align='center' my={2}>
-                    {room.description}
-                  </Text>
+  {rooms.map((room) => (
+    <>
+      <Flex
+        direction='row'
+        display={['none', 'none', 'flex', 'flex', 'flex', 'flex']}
+      >
+        <Center w='100%'>
+          {room.id % 2 == 0 ?
+            <Fade right>
+              <Flex direction='column'>
+                <Text color='primary' fontSize='xl' align='center' my={1}>
+                  {room.title}
+                </Text>
+                <Text align='center' my={2}>
+                  {room.description}
+                </Text>
+                {/* Dodaj warunek, aby nie wyświetlać przycisku dla konkretnego pokoju */}
+                {room.id !== 2 && ( // Przykład: Pokój o id 3 nie będzie miał przycisku
                   <Button
                     as='a'
                     my={2}
@@ -239,20 +156,113 @@ export default function Main() {
                   >
                     Reserve
                   </Button>
-                </Flex>
-              </Fade>
-              <Fade right>
-                <Image src={room.src} w='100%' />
-              </Fade>
-            </Flex>
-          </>
-        ))}
+                )}
+              </Flex>
+            </Fade>
+            :
+            <Fade left>
+              <Image src={room.src} />
+            </Fade>
+          }
+        </Center>
+        <Center w='100%'>
+          {room.id % 2 != 0 ?
+            <Fade left>
+              <Flex direction='column'>
+                <Text color='primary' fontSize='xl' align='center' my={2}>
+                  {room.title}
+                </Text>
+                <Text align='center' my={2}>
+                  {room.description}
+                </Text>
+                {/* Dodaj warunek, aby nie wyświetlać przycisku dla konkretnego pokoju */}
+                {room.id !== 2 && ( // Przykład: Pokój o id 3 nie będzie miał przycisku
+                  <Button
+                    as='a'
+                    my={2}
+                    mx={12}
+                    bg='none'
+                    border='2px'
+                    borderRadius={0}
+                    fontWeight='bold'
+                    transition='all 0.2s cubic-bezier(.08,.52,.52,1)'
+                    _hover={{
+                      bg: 'primary',
+                      textColor: 'black',
+                      fontWeight: 'extrabold'
+                    }}
+                    _active={{
+                      bg: 'primary',
+                      transform: 'scale(0.98)',
+                    }}
+                    _focus={{}}
+                    onClick={onOpen}
+                  >
+                    Reserve
+                  </Button>
+                )}
+              </Flex>
+            </Fade>
+            :
+            <Fade left>
+              <Image src={room.src} />
+            </Fade>
+          }
+        </Center>
       </Flex>
+      <Flex
+        direction='column-reverse'
+        display={['flex', 'flex', 'none', 'none', 'none', 'none']}
+      >
+        <Fade left>
+          <Flex direction='column' my={10}>
+            <Text color='primary' fontSize='xl' align='center' my={1}>
+              {room.title}
+            </Text>
+            <Text align='center' my={2}>
+              {room.description}
+            </Text>
+            {/* Dodaj warunek, aby nie wyświetlać przycisku dla konkretnego pokoju */}
+            {room.id !== 2 && ( // Przykład: Pokój o id 3 nie będzie miał przycisku
+              <Button
+                as='a'
+                my={2}
+                mx={12}
+                bg='none'
+                border='2px'
+                borderRadius={0}
+                fontWeight='bold'
+                transition='all 0.2s cubic-bezier(.08,.52,.52,1)'
+                _hover={{
+                  bg: 'primary',
+                  textColor: 'black',
+                  fontWeight: 'extrabold'
+                }}
+                _active={{
+                  bg: 'primary',
+                  transform: 'scale(0.98)',
+                }}
+                _focus={{}}
+                onClick={onOpen}
+              >
+                Reserve
+              </Button>
+            )}
+          </Flex>
+        </Fade>
+        <Fade right>
+          <Image src={room.src} w='100%' />
+        </Fade>
+      </Flex>
+    </>
+  ))}
+</Flex>
+
       <Portal>
         <Modal isOpen={isOpen} onClose={onClose} >
           <ModalOverlay bg="rgba(0, 0, 0, 0.4)" zIndex={1400} />
           <ModalContent bg="white" zIndex={1500}>
-            <ModalHeader>Okno z przyciskami</ModalHeader>
+            <ModalHeader>Contact and Reserve</ModalHeader>
             <ModalCloseButton />
             <ModalBody>
               <Button
