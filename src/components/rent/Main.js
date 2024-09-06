@@ -63,6 +63,13 @@ import {
       },
       {
         id: 5,
+        title: 'Honda ADV 150',
+        src: './lucky-adv.jpg',
+        description: 'Hond ADV 150 Great bike for traveling',
+        link: ''
+      },
+      {
+        id: 6,
         title: 'Honda Click',
         src: './lucky-click.jpg',
         description: 'Honda Click 160 easy to handle in heavy traffic jams',
